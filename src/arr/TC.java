@@ -8,10 +8,11 @@ import java.util.LinkedList;
 import java.util.Set;
 
 import com.sun.javafx.collections.MappingChange.Map;
+import com.sun.xml.internal.bind.v2.runtime.unmarshaller.InterningXmlVisitor;
 
 import global.Generic;
 
-public class TutorialCup extends Generic{
+public class TC extends Generic{
 
 	
 	/***
@@ -532,11 +533,226 @@ public class TutorialCup extends Generic{
 	 * @param args
 	 */
 	static void commonNumbersIn3Arrays(){
+		int a[] = {1, 5, 10, 20, 40, 80};
+		int x = a.length;
+		int b[] = {6, 7, 20, 80, 100};
+		int y = b.length;
+		int c[] = {3, 4, 15, 20, 30, 70, 80, 120};
+		int z = c.length;
 		
+		int i,j,k=0;
+		HashMap<Integer, Integer> map = new HashMap<>();
+		
+		for(int a1:a){
+			if(map.containsKey(a1)){
+				map.put(a1, map.get(a1)+1);
+			}else
+				map.put(a1, 1);
+		}
+		for(int b1:b){
+			if(map.containsKey(b1)){
+				map.put(b1, map.get(b1)+1);
+			}else
+				map.put(b1, 1);
+		}
+		for(int c1:c){
+			if(map.containsKey(c1)){
+				map.put(c1, map.get(c1)+1);
+			}else
+				map.put(c1, 1);
+		}
+		System.out.println("map is:" + map);
+		
+		for(HashMap.Entry m:map.entrySet()){
+			if((int)m.getValue()==3){
+				System.out.println(m.getKey());
+			}
+		}
+	}
+	
+	/***
+	 * We have three sorted arrays and you have to find common numbers which is present in all three arrays
+	 * Pending - with loop
+	 * @param args
+	 */
+	static void commonNumbersIn3Arrays1(){
+		int a[] = {1, 5, 10, 20, 40, 80};
+		int x = a.length;
+		int b[] = {6, 7, 20, 80, 100};
+		int y = b.length;
+		int c[] = {3, 4, 15, 20, 30, 70, 80, 120};
+		int z = c.length;
+		
+		int i,j,k=0;
+		
+		if(a[x]==b[y] && b[y]==c[z]){
+			x++;y++;z++;
+		}else{
+			
+		}	
+	}
+	
+	/***
+	 * Find the smallest missing number in N sized sorted array
+	 * having unique elements in the range of 0 to M-1, where M>N
+	 * @param args
+	 */
+	static void smallestMissing(){
+		int[] arr = {0,1,2,3,4,5,7,8,9};
+		int l = arr.length;
+		int x = 0,i = 0;
+		while(i<l){
+			if(arr[x]==i){
+				i++;
+				x++;
+			}else{
+				while(i!=arr[x]){
+					System.out.println(i);
+					return;
+				}
+			}
+		}
+	}
+	
+	/***
+	 * In the given array, you need to find maximum sum of elements such that no two are adjacent (consecutive).
+	 * You can not add immediate neighbour numbers. 
+	 * Pending - yet to be done...have to understand logic
+	 * @param args
+	 */
+	static void alternateMaxSum(){
+		int[] arr ={4,10,8,-5,6,9,-2};
+		int l = arr.length;
+		int max = Integer.MIN_VALUE;
+		for(int i=0;i<l;i++){
+			int sum=0;
+			for(int j=i;j<l;j+=2){
+				sum=sum+arr[j];
+			}
+			System.out.println("1st sum: " + sum);
+			if(sum>max)
+				max=sum;
+		}
+		System.out.println(max);
+	}
+	
+	/***
+	 * In the given sorted array,
+	 * find the number of times X is coming. (X is integer)
+	 * @param args
+	 */
+	static void occurenceX(){
+		int[] arr = {1,2,2,2,2,3,3,3,4,4,4,5,5};
+		int l = arr.length;
+		int x = 5;
+		int c=0;
+		for(int a:arr){
+			if(a==x)
+				c++;
+		}
+		System.out.println(c);
+	}
+	
+	/***
+	 * In the given sorted array,
+	 * find the number of times X is coming. (X is integer)
+	 * DONE BY:- without looping complete array.
+	 * @param args
+	 */
+	static void occurenceX1(){
+		int[] arr = {1,2,2,2,2,3,3,3,4,4,4,5,5};
+		int l = arr.length;
+		int x = 2;
+		int a=0,b=l-1;
+		while(arr[a]!=x){
+			a++;
+		}
+		while(arr[b]!=x){
+			b--;
+		}
+		System.out.println(b-a+1);
+	}
+	
+	/***
+	 * Rotate the given image by 90 degrees
+	 * Image : An image can be represented as a 2D matrix which can be stored in a buffer.
+	 * So, the matrix contains it's base address.
+	 */
+	static void rotateImage(){
+		//Basic idea: In rotated_image [i] [m-j-1] = given_image [j] [i] for all i, j
+		int arr1[][] = new int[3][4];
+		arr1[0][0] = 1;
+		arr1[0][1] = 2;
+		arr1[0][2] = 3;
+		arr1[0][3] = 4;	 
+		arr1[1][0] = 5;
+		arr1[1][1] = 6;
+		arr1[1][2] = 7;
+		arr1[1][3] = 8;	 
+		arr1[2][0] = 9;
+		arr1[2][1] = 10;
+		arr1[2][2] = 11;
+		arr1[2][3] = 12;
+		
+		int arr2[][] = new int[4][3];
+		for(int i=0;i<4;i++){
+			for(int j=0;j<3;j++){
+				arr2[1][j] = arr1[j][i];
+			}
+		}
+		
+		for(int[] a:arr1)
+			for(int a1:a)
+				System.out.println(a1);
+		
+		for(int[] a:arr2)
+			for(int a1:a)
+				System.out.println(a1);
 	}
 	
 	
+	/***
+	 * In the given unsorted array, which may also contain duplicates, 
+	 * find the minimum distance between 2 different numbers in the given array.
+	 * @param args
+	 */
+	static void minDist(){
+		int a= 8;
+		int b= 7;
+		int[] arr = {4,7,5,6,5,3,6,8,5};
+		int l = arr.length;
+		int min = Integer.MAX_VALUE;
+		int x = 0;
+		for(int i=0;i<l;i++){
+			if(arr[i]==b){
+				x=a;
+			}else if(arr[i]==a){
+				x=b;
+			}
+			
+			if(arr[i] == a || arr[i] == b)
+			for(int j=i+1;j<l;j++){
+				if(arr[j]==x){
+					int temp = j-i; 
+					if(min>temp)
+						min = temp;
+				}
+			}
+		}
+		System.out.println(min);
+	}
+	
+	/***
+	 * Find all pair of elements in the given array with given difference. 
+	 * (array without duplicates).
+	 * @param args
+	 */
+	static void pairDiff(){
+		int[] arr = {90, 70, 20, 80, 50, 25, 35, 15, 100, 150};
+		
+	}
+	
 	public static void main(String[] args) {
-		firstRepeat1();
+		minDist();
 	}
 }

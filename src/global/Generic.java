@@ -25,4 +25,8 @@ public class Generic {
 		y=x-y;
 		x=x-y;
 	}
+	
+	public static void sortBySet(int[] arr){
+		
+	}
 }
