@@ -4,45 +4,47 @@ public class Queue {
 
 	int size = 5;
 	int[] q = new int[size];
-	int front = 0;
-	int rear = 0;
+	int front;
+	int rear;
+	int size1;
 	
 	public void enqueue(int value){
-		q[rear] = value;
-		rear = (rear+1)%size;
-		size++;
-
+		if(!isFull()){
+			q[rear] = value;
+			rear = (rear+1)%size;
+			size1++;
+		}else
+			System.out.println("The Q is full");
 	}
 	
 	public int dequeue(){
-		int val = q[front];
-		front = (front+1)%size;
-		size--;
-		return val;
+		if(!isEmpty()){
+			int val = q[front];
+			front = (front+1)%size;
+			size1--;
+			return val;
+		}else{
+			System.out.println("THe Q is empty");
+			return 0;
+		}
 	}
 	
-	/*private void resize(){
-		int[] newQ = null; //create a temp stack.
-		if(size==0){
-			size=1;
-			newQ = new int[size]; //if the initial stack is empty, then init the stack with size =1;
-			
-		}
-		else{
-			size*=2;
-			newQ = new int[size]; // if the stack exists, then double the size of the array.
-			for(int i=0;i<size/2;i++){
-				newQ[i] = q[i]; // copy the old arrey into new array
-			}
-		}
-		q = newQ; //point old array ref to the new array.
+	public int getSize(){
+		return (size1);
+	}
 	
-	}*/
+	public boolean isEmpty(){
+		return (getSize()==0);
+	}
+	
+	public boolean isFull(){
+		return (getSize()==5);
+	}
 	
 	public void show(){
 		System.out.print("visible elements: ");
-		for(int i=front;i<rear;i++){
-			System.out.print(q[i] + " ");
+		for(int i=0;i<size1;i++){
+			System.out.print(q[(front+i)%5] + " ");
 		}
 		System.out.println();
 		System.out.print("Total array: ");

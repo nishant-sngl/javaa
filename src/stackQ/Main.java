@@ -38,15 +38,23 @@ public class Main {
 	public static void main(String args[]) {
 		// TODO Auto-generated constructor stub
 		Queue q = new Queue();
-		q.enqueue(11);
-		q.show();
-		q.enqueue(21);
-		q.show();
-		q.enqueue(31);
-		q.show();
-		q.enqueue(41);
-		q.show();
 		q.enqueue(5);
+		q.enqueue(2);
+		q.enqueue(7);
+		q.enqueue(3);
+
+		q.dequeue();
+		q.dequeue();
+		
+		q.enqueue(9);
+		q.enqueue(1);
+		q.enqueue(11);
+		q.enqueue(12);
 		q.show();
+		q.getSize();
+		//q.isEmpty();
+		System.out.println(q.isFull());
 	}
+	
+	
 }
