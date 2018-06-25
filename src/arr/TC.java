@@ -730,7 +730,7 @@ public class TC extends Generic{
 				x=b;
 			}
 			
-			if(arr[i] == a || arr[i] == b)
+			if(arr[i] == a || arr[i] == b)	
 			for(int j=i+1;j<l;j++){
 				if(arr[j]==x){
 					int temp = j-i; 

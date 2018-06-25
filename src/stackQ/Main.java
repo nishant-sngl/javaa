@@ -1,7 +1,5 @@
 package stackQ;
 
-import java.util.concurrent.DelayQueue;
-
 public class Main {
 
 	/***
@@ -35,7 +33,7 @@ public class Main {
 	 * main for queue
 	 * @param args
 	 */
-	public static void main(String args[]) {
+/*	public static void main(String args[]) {
 		// TODO Auto-generated constructor stub
 		Queue q = new Queue();
 		q.enqueue(5);
@@ -54,7 +52,7 @@ public class Main {
 		q.getSize();
 		//q.isEmpty();
 		System.out.println(q.isFull());
-	}
+	}*/
 	
 	
 }
