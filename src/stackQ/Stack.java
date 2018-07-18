@@ -25,7 +25,6 @@ public class Stack {
 		if(size==0){
 			size=1;
 			newStack = new String[size]; //if the initial stack is empty, then init the stack with size =1;
-			
 		}
 		else{
 			size*=2;
