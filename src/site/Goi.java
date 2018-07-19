@@ -15,6 +15,7 @@ public class Goi {
 		d.switchTo().frame("authiframe");
 		d.findElement(By.xpath(".//*[@id='authMobile']")).sendKeys("9999999999");
 		//d.quit();
+		//test
 		
 	}
 	
