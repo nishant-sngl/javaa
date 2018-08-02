@@ -4,8 +4,9 @@ public class OtherRec {
 
 	public static void main(String[] args) {
 		long x = 818;
-		System.out.println(pow(3,3));
+		System.out.println(countx("xxixx"));
 	}
+	
 	
 	private static long sumDigits(long n){
 		if(n<10){
@@ -38,9 +39,9 @@ public class OtherRec {
 				return 1;
 			}else{
 				return 0;
-			}
+			} 
 		}else{
-			if(n%10==8){
+			if(n%10==8){ 
 				if((n/10)%10==8){
 					return 2+count8(n/10);
 				}else{
@@ -60,4 +61,31 @@ public class OtherRec {
 		}
 	}
 
+	private static int countx(String s, int i){
+		if(i==s.length()-1){
+			if(s.charAt(i)=='x'){
+				return 1;
+			}else{
+				return 0;
+			}
+		}else{
+			if(s.charAt(i)=='x'){
+				return 1+countx(s,i+1);
+			}else{
+				return 0+countx(s,i+1);
+			}
+		}
+	}
+	
+	private static int countx(String s){
+		if(s.length()==0){
+				return 0;
+		}else{
+			if(s.charAt(0)=='x'){
+				return 1+countx(s.substring(1));
+			}else{
+				return 0+countx(s.substring(1));
+			}
+		}
+	}
 }
