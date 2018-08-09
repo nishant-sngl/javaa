@@ -12,10 +12,21 @@ public class BinarySearch {
 		int len = arr.length;
 		int i=0;
 		int j=len-1;
-		int index = bs(arr, i, j);
+		int index = bs1(arr, i, j);
 		System.out.println(index);
 	}
 	
+	private static int bs1(int[] arr, int i, int j){
+		int mid = i+((j-i)/2);
+		if(arr[mid]==x){
+			return mid;
+		}else if(arr[mid]<x){
+			return bs1(arr,mid+1,j);
+		}else if(arr[mid]>x)
+			return bs1(arr,i,mid-1);
+		return mid;
+	}
+
 	private static int bs(int[] arr, int i, int j){
 		int mid = j+(j-i)/2;
 		if(arr[mid]==x){
@@ -29,4 +40,10 @@ public class BinarySearch {
 		}
 		return mid;
 	}
+	
+	
+	
+	
+	
+	
 }

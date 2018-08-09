@@ -4,6 +4,12 @@ import java.util.HashSet;
 
 import ll.LinkedList1.Node;
 
+/***
+ * Impementing Linked List
+ * ###Proper####
+ * @author nishant
+ *
+ */
 public class ll3 {
 
 	Node head; 
