@@ -2,6 +2,8 @@ package core.abs;
 
 public abstract class Abs1 {
 
+	public int x=0;
+	public int y=0;
 	public void a1(){
 		System.out.println("a1...");
 	}

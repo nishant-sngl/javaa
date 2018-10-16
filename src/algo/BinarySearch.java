@@ -8,7 +8,9 @@ public class BinarySearch {
 	public static void main(String[] args) {
 		int[] arr = {1,4,7,3,9,5};
 		Arrays.sort(arr);
-		System.out.println(arr);
+		for(int a:arr)
+			System.out.print(a);
+		System.out.println();
 		int len = arr.length;
 		int i=0;
 		int j=len-1;
@@ -28,7 +30,7 @@ public class BinarySearch {
 	}
 
 	private static int bs(int[] arr, int i, int j){
-		int mid = j+(j-i)/2;
+		int mid = i+(j-i)/2;
 		if(arr[mid]==x){
 			return mid;
 		}else if(arr[mid]>x){
@@ -39,11 +41,5 @@ public class BinarySearch {
 			return bs(arr,i,j);
 		}
 		return mid;
-	}
-	
-	
-	
-	
-	
-	
+	}	
 }

@@ -1,6 +1,7 @@
 package core.regex;
 
 import java.io.File;
+import java.util.LinkedList;
 import java.util.StringTokenizer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -18,7 +19,11 @@ public class Regex1 {
 			System.out.println(st.nextToken());
 		}*/
 		//System.out.println(isMobile("6999999991"));
-		getJavaFileCount();
+		//getJavaFileCount();
+		LinkedList<String> l = new LinkedList<>();
+		String s = "dfsefwe\bfefe\b";
+		int i =s.indexOf("h");
+		System.out.println(i);
 	}
 	
 	private static boolean isMobile(String n){

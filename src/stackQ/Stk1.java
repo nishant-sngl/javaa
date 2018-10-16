@@ -12,7 +12,7 @@ public class Stk1 {
 	
 	static class Node{
 		int data;
-		Node node;
+		//Node node;
 		Node next;
 		Node(int data){
 			this.data=data;

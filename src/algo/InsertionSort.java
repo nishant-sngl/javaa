@@ -15,10 +15,10 @@ public class InsertionSort {
 	 * Outer loop starts from Index=1; then this value is compared to all the values before that index.
 	 * Then the test value is placed at the correct position and the remaining array is shifter right. 
 	 * 12 | 11 | 13 | 5 | 6 | 
-	 * 11 | 12 | 13 | 5 | 6 | 
-	 * 11 | 12 | 13 | 5 | 6 | 
-	 * 5 | 11 | 12 | 13 | 6 | 
-	 * 5 | 6 | 11 | 12 | 13 |
+	 * 11 | 12 | 13 | 5 | 6 | //12 is placed bw 11 n 13
+	 * 11 | 12 | 13 | 5 | 6 | //13 is at correct position
+	 * 5 | 11 | 12 | 13 | 6 | //5 is placed
+	 * 5 | 6 | 11 | 12 | 13 | //6 is placed
 	 * @param a
 	 * @return
 	 */

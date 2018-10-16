@@ -1,6 +1,7 @@
 package ds.maps;
 
-import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Comparator;
 
 public class Employee implements Comparator<Employee>{
@@ -49,6 +50,7 @@ public class Employee implements Comparator<Employee>{
 		this.age = age;
 	}
 	
+	/*
 	public static void main(String[] args) {
 		Employee[] e = new Employee[4];
 		e[0] = new Employee("abc1", 11, "aut1", 34);
@@ -112,7 +114,7 @@ public class Employee implements Comparator<Employee>{
 		}
 		
 	}
-
+*/
 	@Override
 	public int compare(Employee o1, Employee o2) {
 		// TODO Auto-generated method stub
