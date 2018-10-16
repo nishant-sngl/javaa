@@ -1,8 +1,6 @@
-package ll;
+package ds.ll;
 
 import java.util.HashSet;
-
-import ll.LinkedList1.Node;
 
 /***
  * Impementing Linked List

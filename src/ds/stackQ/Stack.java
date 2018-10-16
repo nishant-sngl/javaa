@@ -1,4 +1,4 @@
-package stackQ;
+package ds.stackQ;
 
 public class Stack {
 	

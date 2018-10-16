@@ -1,4 +1,4 @@
-package stackQ;
+package ds.stackQ;
 
 /***
  * Implementing stack by Linked List
