@@ -2,6 +2,8 @@ package ds.maps;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -73,5 +75,13 @@ public class HashMap1 {
 		}
 	*/
        
+        Collections.sort(list, new Comparator<Map<String, Double>>() {
+
+			@Override
+			public int compare(Map<String, Double> o1, Map<String, Double> o2) {
+				// TODO Auto-generated method stub
+				return (o1.get(key));
+			}
+		});
     }
 }
